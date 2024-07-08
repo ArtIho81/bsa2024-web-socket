@@ -20,7 +20,7 @@ const showInputModal = ({ title, onChange = () => {}, onSubmit = () => {} }) => 
 
     submitButton.addEventListener('click', () => {
         modalElement.remove();
-        onSubmit();
+        onSubmit(inputElement.value);
     });
     inputElement.addEventListener('change', e => onChange(e.target.value));
 };
